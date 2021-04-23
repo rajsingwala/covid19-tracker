@@ -1,0 +1,518 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eee;
+}
+/********************************navbar**********************************/
+.navbar {
+  background: #b6102e;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  z-index: 9999999999;
+  width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.navbar-logo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.fa-typo3 {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.nav-links:hover {
+  border-bottom: 4px solid #fff;
+  transition: all 0.2s ease-out;
+  background-color: #cf1235;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+.nav-links-active {
+  background-color: #cf1235 !important;
+  border-bottom: 4px solid #fff !important;
+}
+.nav-head {
+  white-space: nowrap;
+}
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    /* right: -70%; */
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #b6102e;
+    left: 0;
+    /* right: -8.8%; */
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: #fff;
+    color: #242424;
+    border-radius: 0;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(5%, 50%);
+    justify-content: flex-start !important;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 70%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+
+  .nav-links-mobile:hover {
+    background: #fff;
+    color: #242424;
+    transition: 250ms;
+  }
+}
+
+@media only screen and (max-width: 555px) {
+  .nav-head {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .nav-head {
+    font-size: 1.2rem;
+  }
+  .menu-icon {
+    font-size: 1.5rem;
+    transform: translate(-100%, 95%);
+  }
+}
+@media only screen and (max-width: 360px) {
+  .nav-head {
+    font-size: 1rem;
+  }
+  .menu-icon {
+    font-size: 1.2rem;
+    transform: translate(-100%, 130%);
+  }
+}
+/*******************************home*******************************/
+.app {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 30px;
+  padding-top: 7rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.app__india {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 30px;
+  padding-top: 7rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.app__left {
+  display: grid;
+  grid-template-rows: 0fr 0.2fr;
+  row-gap: 30px;
+}
+.app__left__india {
+  display: grid;
+  grid-template-rows: 0fr 0.2fr;
+  row-gap: 30px;
+}
+.app__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app__header h1 {
+  font-size: 2rem;
+  white-space: nowrap;
+  color: #cc1034;
+}
+.MuiSelect-outlined.MuiSelect-outlined {
+  display: flex;
+  align-items: center;
+  height: 1rem;
+}
+.MuiOutlinedInput-root {
+  position: relative;
+  border-radius: 4px;
+  background-color: #fff;
+  height: 3rem;
+}
+.app__dropdown__name {
+  margin-left: -1rem;
+}
+.app__dropdown__flag {
+  object-fit: contain !important;
+  object-position: center !important;
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.app__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-top: 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #fff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b6102e;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b6102e;
+}
+
+.table {
+  margin-top: 1rem;
+  overflow-y: auto;
+  height: 20rem;
+  color: #6a5d5d;
+}
+.table tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table td {
+  padding: 0.5rem;
+}
+.table tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
+.table__left {
+  display: flex;
+  align-items: center;
+}
+.table__flag {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+.app__chart {
+  margin-top: 2rem;
+}
+.linegraph {
+  margin-top: 1rem;
+}
+.infoBox:hover {
+  cursor: pointer;
+}
+.infoBox--selected {
+  border-top: 10px solid greenyellow;
+}
+.infoBox--red {
+  border-color: #cc1034;
+}
+.infoBox--green {
+  color: rgb(43, 202, 70) !important;
+}
+.infobox__cases {
+  color: #cc1034;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.infobox__total {
+  color: #6c757d;
+  font-weight: 700 !important;
+  font-size: 0.8rem !important;
+  margin-top: 15px !important;
+}
+
+.map {
+  height: 440px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 1rem;
+  box-shadow: 0 0 8px -4px rgba(0, 0, 0, 0.5);
+}
+
+.map .leaflet-container {
+  height: 100%;
+}
+.info-container {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.info-flag {
+  width: 100%;
+  height: 8rem;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.info-country {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.info-cases,
+.info-recovered,
+.info-deaths {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+@media only screen and (max-width: 1430px) {
+  .app {
+    padding: 7rem 2rem;
+  }
+  .app__india {
+    padding: 7rem 2rem;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .app__india {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 1026px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+  .app__stats {
+    margin-top: 0rem;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .app {
+    padding: 8rem 2rem;
+  }
+  .app__india {
+    padding: 8rem 2rem;
+  }
+  .app__stats {
+    grid-template-columns: 1fr;
+    margin-top: 1.5rem;
+  }
+  .app__left__india {
+    gap: 0;
+    margin-top: -2rem;
+  }
+  .MuiOutlinedInput-root {
+    /* height: 2.1rem; */
+    margin-top: 0.2rem;
+  }
+  .app__dropdown__flag {
+    height: 1.3rem !important;
+    width: 1.3rem !important;
+  }
+  .app__header h1 {
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .app__header h1 {
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+  }
+}
+@media only screen and (max-width: 552px) {
+  .app__header {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .MuiOutlinedInput-root {
+    margin-top: 1rem;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .app {
+    padding-top: 8rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .app__india {
+    padding-top: 8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .app__india {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+
+/*************India***********/
+.MuiMenu-paper {
+  top: 111px !important;
+}
+
+.state_table {
+  margin-top: 1rem;
+  overflow-y: auto;
+  height: 34rem;
+  color: #6a5d5d;
+}
+
+.state_table tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.state_table td {
+  padding: 0.5rem;
+}
+.state_table tr:nth-of-type(odd) {
+  background-color: #f3f2f8;
+}
+
+.india__chart {
+  margin-top: 1rem;
+  background-color: #fff;
+  padding: 1rem 1rem;
+}
+
+.app__right h3 {
+  color: #b6102e;
+}
+
+.india__chart h2 {
+  color: #b6102e;
+}
+
+.app__title {
+  font-weight: bolder !important;
+  color: #cc1034 !important;
+}
+
+.chart__title {
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #cc1034;
+}
